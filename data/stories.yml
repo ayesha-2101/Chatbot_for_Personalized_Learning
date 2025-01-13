@@ -1,0 +1,66 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: list courses
+  steps:
+  - intent: list_courses
+  - action: utter_list_courses
+
+
+- story: about machine learning
+  steps:
+  - intent: about_machine_learning
+  - action: utter_about_machine_learning
+
+- story: ask faq
+  steps:
+  - intent: ask_faq
+  - action: utter_ask_faq
+
+- story: greet and list courses 
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: list_courses
+  - action: utter_list_courses
+
+- story: greet and about machine learning
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: about_machine_learning
+  - action: utter_about_machine_learning
+
+- story: farewell 
+  steps: 
+  - intent: goodbye
+  - action: utter_goodbye
+  
