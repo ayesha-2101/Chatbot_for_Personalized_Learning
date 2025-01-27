@@ -1,0 +1,11 @@
+venv/
+models/
+.rasa/
+.env
+*.log
+__pycache__/
+*.pyc
+*.pyo
+*.idea/
+*.vscode/
+.DS_Store
